@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Developer</title>
+    <link rel="stylesheet" type="text/css" href="/mainMenuBusinessDeveloper.css">
+</head>
+<body>
+<h1 th:text="'Employee: ' + ${employeeUser.getUsername()}"></h1>
+<h2>Business Developer</h2>
+<div>
+    <p>Total rented cars: <span th:text="${rentedCarsCount}"></span></p>
+    <p>Total revenue: <span th:text="${totalRevenue}"></span></p>
+</div>
+<p th:if="${error}" th:text="${error}"></p>
+<br>
+<form action="/" method="get">
+    <button type="submit">Log out</button>
+</form>
+</body>
+</html>
